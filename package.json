@@ -2,9 +2,8 @@
   "name": "local_pr_so",
   "version": "1.0.0",
   "description": "special order backend ver.local",
-  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node app.js --delay 2"
   },
   "repository": {
     "type": "git",
@@ -17,6 +16,17 @@
   },
   "homepage": "https://github.com/jjikky/specialOrder_local#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.8.3",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
