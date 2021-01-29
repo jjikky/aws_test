@@ -67,3 +67,11 @@ npm install morgan
 npm install helmet
 npm install cookie-parser
 npm install body-parser
+
+
+!!!!!!!!!!!!!!!------error--------!!!!!!!!!!!!!!!!
+여기까지 과정중
+Cannot use import statement outside a module 에러 해결
+>> package.json에  "type": "module" 추가
+
+또다른에러 : import할 때 linux는 확장자 붙여줘야하는듯
