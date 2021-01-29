@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "special order backend ver.local",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js --delay 2"
+    "start": "nodemon --exec babel-node init.js --delay 2"
   },
   "repository": {
     "type": "git",
