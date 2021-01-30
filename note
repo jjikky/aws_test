@@ -75,3 +75,10 @@ Cannot use import statement outside a module 에러 해결
 >> package.json에  "type": "module" 추가
 
 또다른에러 : import할 때 linux는 확장자 붙여줘야하는듯
+
+
+
+4-------------------------------------------------------------
+controller와 router를 작성한후 view를 위해 pug설치
+npm install pug
+view 작성
