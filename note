@@ -82,3 +82,9 @@ Cannot use import statement outside a module 에러 해결
 controller와 router를 작성한후 view를 위해 pug설치
 npm install pug
 view 작성
+\
+
+5-------------------------------------mongo연결
+mongodb다운로드 후 mongod , mongo 명령어를 통해 확인
+연결을 위해 mongoose 설치 > npm install mongoose
+npm install dotenv
