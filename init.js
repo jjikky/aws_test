@@ -2,6 +2,7 @@ import "./db";
 import app from "./app";
 import dotenv from "dotenv";
 dotenv.config();
+import "./models/order";
 
 const PORT = process.env.PORT || 5003;
 

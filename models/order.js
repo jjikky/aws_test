@@ -25,7 +25,7 @@ const OrderSchema = new mongoose.Schema({
         ref: "User"
     },
     category: {
-        type: string,
+        type: String,
         required: "Category is required"
     },
     location: [
