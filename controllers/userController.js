@@ -35,6 +35,37 @@ export const postLogin = passport.authenticate("local", {
     successRedirect: routes.home
 });
 
+export const facebookLogin = passport.authenticate('facebook', {
+    authType: 'rerequest', scope: ['public_profile', 'email']
+});
+
+export const facebookLoginCallback = async (req, accessToken, refreshToken, profile, cb) => { // 다시 작성
+    const { _json: { id, name, email } } = profile;
+    console.log(profile);
+    //console.log(profile, cb);
+    try {
+        const user = await User.findOne({ email });     // email : email (User with the same email as the email from GitHub)
+        //console.log(user);     // show user information
+        if (user) {                // Since it was found above, it is a registered user.
+            user.facebookId = id;      //  So, set the github id to the user's id
+            user.save();
+            return cb(null, user);
+        }                  // Create a new user because he has never signed up
+        const newUser = await User.create({
+            email,
+            name,
+            facebookId: id,
+        });
+        return cb(null, newUser);
+    } catch (error) {
+        return cb(error);
+    }
+};
+
+export const postFacebookLogIn = (req, res) => {
+    res.redirect(routes.home);
+};
+
 export const logout = (req, res) => res.render("logout");
 export const editProfile = (req, res) => res.render("editProfile");
 export const changePassword = (req, res) => res.render("changePassword");

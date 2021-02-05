@@ -5,18 +5,19 @@ const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
 /*
-const FACEBOOK = "/auth/facebook"
+
 const NAVER = "/auth/naver"
 const KAKAO = "/auth/kakao"
 const GOOGLE = "/auth/Google"
 const FORGET_PASSWORD_EMAIL = ""
 const FORGET_PASSWORD_PHONE = ""
-
 */
 
+//Facebook
+const FACEBOOK = "/auth/facebook";
+const FACEBOOK_CALLBACK = "/auth/facebook/callback";
 
 // Users
-
 const USERS = "/users";         // app.use
 const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
@@ -25,7 +26,6 @@ const BOOKMARK = "/:id/bookmark"
 
 
 // Order
-
 const ORDER = "/order";         // app.use
 const UPLOAD_ORDER = "/upload";
 const ORDER_DETAIL = "/:id";
@@ -54,7 +54,9 @@ const routes = {
     editOrder: EDIT_ORDER,
     deleteOrder: DELETE_ORDER,
     api: API,                             // API
-    currentPosition: CURRENT_POSITION
+    currentPosition: CURRENT_POSITION,
+    facebook: FACEBOOK,
+    facebookCallback: FACEBOOK_CALLBACK
 };
 
 export default routes;
