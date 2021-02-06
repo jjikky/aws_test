@@ -1,3 +1,5 @@
+import { Router } from "express";
+
 // Global
 const HOME = "/";           // app.use
 const JOIN = "/join";
@@ -16,6 +18,7 @@ const FORGET_PASSWORD_PHONE = ""
 //Facebook
 const FACEBOOK = "/auth/facebook";
 const FACEBOOK_CALLBACK = "/auth/facebook/callback";
+const APP_ID = "/appid"
 
 // Users
 const USERS = "/users";         // app.use
@@ -56,7 +59,9 @@ const routes = {
     api: API,                             // API
     currentPosition: CURRENT_POSITION,
     facebook: FACEBOOK,
-    facebookCallback: FACEBOOK_CALLBACK
+    facebookCallback: FACEBOOK_CALLBACK,
+    appid: APP_ID,
 };
+
 
 export default routes;

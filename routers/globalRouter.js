@@ -2,7 +2,7 @@ import express from "express";
 import routes from "../routes";
 import passport from "passport";
 import { home, search } from "../controllers/orderController";
-import { getJoin, postJoin, getLogin, postLogin, logout, facebookLogin, postFacebookLogIn } from "../controllers/userController";
+import { getJoin, postJoin, getLogin, postLogin, logout, facebookLogin, postFacebookLogIn, appId, postappId } from "../controllers/userController";
 
 const globalRouter = express.Router();
 
@@ -18,8 +18,13 @@ globalRouter.get(routes.facebook, facebookLogin);
 globalRouter.get(
     routes.facebookCallback,
     passport.authenticate("facebook", { failureRedirect: "/login" }),
+    //appId,
     postFacebookLogIn
 );
+
+
+globalRouter.get(routes.appid, appId);
+globalRouter.post(routes.appid, postappId);
 
 globalRouter.get(routes.logout, logout);
 

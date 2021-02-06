@@ -2,7 +2,7 @@ import passport from "passport";
 import User from "./models/User";
 import GoogleStrategy from "passport-google-oauth20";
 import FacebookStrategy from "passport-facebook";
-import { facebookLoginCallback } from "./controllers/userController";
+import { facebookLoginCallback, appId } from "./controllers/userController";
 import routes from "./routes";
 
 passport.use(User.createStrategy());   //local

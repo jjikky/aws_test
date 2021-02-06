@@ -1,0 +1,7 @@
+extends layouts/main
+
+block content
+    .form-container
+        form(action=routes.appid, method ="post")
+            input(type="string", name="appid", placeholder="appid",require=true)
+            input(type="submit", value="submit")
