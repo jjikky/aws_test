@@ -64,7 +64,11 @@ export const facebookLoginCallback = async (req, accessToken, refreshToken, prof
 };
 
 export const postFacebookLogIn = (req, res) => {
-    res.redirect(routes.appid);
+    if (req.user.appId) {
+        res.redirect(routes.home);
+    } else {
+        res.redirect(routes.appid);
+    }
 };
 export const appId = (req, res) => res.render("appId");
 export const postappId = async (req, res) => {
