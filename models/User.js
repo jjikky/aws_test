@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
     avatarUrl: String,
     facebookId: Number,
     googleId: Number
-});
+}); //
 
 UserSchema.plugin(passportLocalMongoose, { usernameField: "appid" });
 
